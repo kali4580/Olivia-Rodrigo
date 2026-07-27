@@ -3,29 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Rodrigo - GUTS</title>
+    <title>Olivia Rodrigo // GUTS</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="guts-page">
-    <nav class="navbar">
-        <a href="index.html">SOUR</a>
-        <a href="page2.html" class="active">GUTS</a>
-        <a href="page3.html">OR3 Teaser</a>
+<body class="guts-theme">
+    <div class="custom-cursor"></div>
+    <div class="background-glow"></div>
+    <div class="floating-particles">🎸 🩸 💋 🤘 ⚡</div>
+
+    <nav class="navbar animate-fade-in">
+        <div class="nav-logo">OR // Discography</div>
+        <div class="nav-links">
+            <a href="index.html">SOUR</a>
+            <a href="page2.html" class="active">GUTS</a>
+            <a href="page3.html">GIRL SO IN LOVE</a>
+        </div>
     </nav>
 
-    <main class="content-container">
-        <h1>GUTS (2023)</h1>
-        <p class="album-description">
-            Released in September 2023, <em>GUTS</em> is Olivia Rodrigo's highly anticipated sophomore album. This record expands upon her signature pop-punk sound with sharper wit, heavier guitar riffs, and more sophisticated songwriting. It chronicles the awkward, chaotic transition into her early twenties, navigating sudden fame and messy relationships.
-        </p>
-        <p class="album-description">
-            The album was preceded by the chart-topping lead single 
-            <span class="hover-trigger">"vampire"<span class="hover-image" style="background-image: url('vampire.jpg');"></span></span>, 
-            followed by the sarcastic rock anthem 
-            <span class="hover-trigger">"bad idea right?"<span class="hover-image" style="background-image: url('bad_idea.jpg');"></span></span>, and the high-energy 
-            <span class="hover-trigger">"get him back!"<span class="hover-image" style="background-image: url('get_him_back.jpg');"></span></span>. 
-            Highly praised by critics, <em>GUTS</em> proved that her musical instincts were sharper and bolder than ever.
-        </p>
+    <main class="showcase-container">
+        <header class="hero-section animate-fade-in">
+            <h1 class="glitch-title" data-text="GUTS">GUTS</h1>
+            <p class="subtitle">Spill Your Guts // 2023</p>
+        </header>
+
+        <section class="media-showcase animate-slide-up">
+            <div class="album-art-wrapper">
+                <img src="guts_cover.jpg" alt="GUTS Album Cover" class="album-art">
+                <div class="vinyl-record" style="background-image: url('guts_cover.jpg');"></div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="content-grid animate-slide-up">
+            <div class="bio-card">
+                <h2>The Thematic Depth of GUTS</h2>
+                <p>Released in September 2023, <em>GUTS</em> represents Olivia Rodrigo's sharp transition into an aggressive sophomore rock sound. The album moves away from acoustic bedroom processing, favoring heavy garage-rock guitars, punching drums, and a deeply sarcastic punk attitude. Thematically, it acts as a unfiltered diary tracking the messy mistakes and fierce social anxieties of entering her twenties.</p>
+                <p>The explosive record was spearheaded by the sweeping rock ballad 
+                    <span class="hover-trigger">"vampire"<span class="hover-image" style="background-image: url('vampire.jpg');"></span></span>, 
+                    flanked by cheeky anthems like 
+                    <span class="hover-trigger">"bad idea right?"<span class="hover-image" style="background-image: url('bad_idea.jpg');"></span></span> and the high-octane 
+                    <span class="hover-trigger">"get him back!"<span class="hover-image" style="background-image: url('get_him_back.jpg');"></span></span>. 
+                    Its amethyst-goth style and lightning-fast tempos proved that her writing style had evolved with brilliant maturity and bite.
+                </p>
+            </div>
+
+            <div class="tracklist-card">
+                <h2>Essential Tracklist</h2>
+                <ol class="track-grid">
+                    <li><span class="track-num">01</span> all-american bitch</li>
+                    <li><span class="track-num">02</span> bad idea right?</li>
+                    <li><span class="track-num">03</span> vampire</li>
+                    <li><span class="track-num">04</span> lacy</li>
+                    <li><span class="track-num">05</span> ballad of a homeschooled girl</li>
+                    <li><span class="track-num">06</span> get him back!</li>
+                </ol>
+            </div>
+        </section>
     </main>
+
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>

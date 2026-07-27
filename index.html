@@ -3,40 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Rodrigo - SOUR</title>
+    <title>Olivia Rodrigo // SOUR</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="sour-page">
-    <nav class="navbar">
-        <a href="index.html" class="active">SOUR</a>
-        <a href="page2.html">GUTS</a>
-        <a href="page3.html">Girl So In Love</a>
+<body class="sour-theme">
+    <!-- Custom Moving Cursor Glow -->
+    <div class="custom-cursor"></div>
+
+    <div class="background-glow"></div>
+    <div class="floating-particles">🎵 ✨ 💜 🦋 💔</div>
+
+    <nav class="navbar animate-fade-in">
+        <div class="nav-logo">OR // Discography</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">SOUR</a>
+            <a href="page2.html">GUTS</a>
+            <a href="page3.html">GIRL SO IN LOVE</a>
+        </div>
     </nav>
 
-    <main class="content-container">
-        <h1>SOUR (2021)</h1>
-        
-        <div class="media-group">
-            <!-- Replace with your local image file or a web URL -->
-            <img src="sour_cover.jpg" alt="SOUR Album Cover" class="album-art">
+    <main class="showcase-container">
+        <header class="hero-section animate-fade-in">
+            <h1 class="glitch-title" data-text="SOUR">SOUR</h1>
+            <p class="subtitle">The Legendary Debut Era // 2021</p>
+        </header>
+
+        <section class="media-showcase animate-slide-up">
+            <div class="album-art-wrapper">
+                <img src="sour_cover.jpg" alt="SOUR Album Cover" class="album-art">
+                <div class="vinyl-record" style="background-image: url('sour_cover.jpg');"></div>
+            </div>
             
-            <div class="video-container">
-                <!-- Replace the VIDEO_ID with your preferred YouTube embed link -->
+            <div class="video-wrapper">
                 <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-        </div>
+        </section>
 
-        <p class="album-description">
-            Released in May 2021, <em>SOUR</em> is Olivia Rodrigo's monumental debut studio album. The record serves as a vulnerable, genre-blending exploration of teenage heartbreak, jealousy, and insecurity. Seamlessly shifting between explosive alt-pop punk anthems and minimalist piano ballads, it captures the raw turbulence of adolescence.
-        </p>
-        <p class="album-description">
-            The album achieved massive critical and commercial success, fueled by record-breaking global hit singles like 
-            <span class="hover-trigger">"drivers license"<span class="hover-image" style="background-image: url('drivers_license.jpg');"></span></span>, 
-            <span class="hover-trigger">"deja vu"<span class="hover-image" style="background-image: url('deja_vu.jpg');"></span></span>, and 
-            <span class="hover-trigger">"good 4 u"<span class="hover-image" style="background-image: url('good_4_u.jpg');"></span></span>. 
-            <em>SOUR</em> went on to win three Grammy Awards, solidifying Rodrigo as a defining pop voice of her generation.
-        </p>
+        <section class="content-grid animate-slide-up">
+            <div class="bio-card">
+                <h2>The Thematic Depth of SOUR</h2>
+                <p>Released in May 2021, <em>SOUR</em> is Olivia Rodrigo's monumental debut studio album. Musically, the record serves as a vulnerable, genre-blending exploration of adolescent heartbreak, intense jealousy, and high school insecurity. Heavily driven by a mix of 1990s alt-rock grit and modern bedroom pop aesthetics, it captures the raw, unedited turbulence of a first major breakup.</p>
+                <p>The album achieved historic commercial success, fueled by record-breaking global hit singles like 
+                    <span class="hover-trigger">"drivers license"<span class="hover-image" style="background-image: url('drivers_license.jpg');"></span></span>, 
+                    <span class="hover-trigger">"deja vu"<span class="hover-image" style="background-image: url('deja_vu.jpg');"></span></span>, and the explosive alt-pop punk anthem 
+                    <span class="hover-trigger">"good 4 u"<span class="hover-image" style="background-image: url('good_4_u.jpg');"></span></span>. 
+                    Winning three Grammy Awards, <em>SOUR</em> perfectly matched its sonic identity with a cyber-lavender bedroom grunge motif, solidifying Rodrigo as the definitive voice of her generation.
+                </p>
+            </div>
+
+            <div class="tracklist-card">
+                <h2>Essential Tracklist</h2>
+                <ol class="track-grid">
+                    <li><span class="track-num">01</span> brutal</li>
+                    <li><span class="track-num">02</span> traitor</li>
+                    <li><span class="track-num">03</span> drivers license</li>
+                    <li><span class="track-num">04</span> 1 step forward, 3 steps back</li>
+                    <li><span class="track-num">05</span> deja vu</li>
+                    <li><span class="track-num">06</span> good 4 u</li>
+                </ol>
+            </div>
+        </section>
     </main>
+
+    <!-- Custom Cursor Script -->
+    <script>
+        const cursor = document.querySelector('.custom-cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
 
