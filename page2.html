@@ -1,4 +1,60 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Rodrigo - GUTS</title>
+    <style>
+        /* Shared Style Base */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
+        body { background: linear-gradient(135deg, #b19ffb, #7a63e0); color: #111; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; overflow: hidden; }
+
+        h1 { font-size: 3.5rem; margin-bottom: 20px; cursor: pointer; position: relative; display: inline-block; letter-spacing: -1px; text-shadow: 2px 2px 0px rgba(255,255,255,0.5); text-transform: uppercase; }
+        .hover-img { position: absolute; top: 120%; left: 50%; transform: translateX(-50%) scale(0); width: 260px; height: 260px; border-radius: 4px; box-shadow: 5px 5px 0px #111; object-fit: cover; transition: transform 0.3s ease; pointer-events: none; z-index: 10; border: 3px solid #111; }
+        h1:hover .hover-img { transform: translateX(-50%) scale(1); }
+
+        .media-container { display: flex; gap: 30px; align-items: center; margin: 40px 0; max-width: 900px; }
+        .clickable-pic { width: 320px; height: 210px; border-radius: 4px; object-fit: cover; cursor: pointer; transition: transform 0.2s; border: 3px solid #111; box-shadow: 4px 4px 0px #111; }
+        .clickable-pic:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111; }
+        iframe { border-radius: 4px; border: 3px solid #111; box-shadow: 4px 4px 0px #111; }
+
+        .controls { display: flex; gap: 15px; align-items: center; margin-top: 20px; }
+        .btn { padding: 12px 24px; font-size: 1rem; border: 3px solid #111; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; box-shadow: 3px 3px 0px #111; text-decoration: none; display: inline-block; }
+        .btn:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
+        .like-btn { background: #fff; color: #111; display: flex; align-items: center; gap: 8px; }
+        .like-btn:hover { background: #ff7675; }
+        .next-btn { background: #111; color: white; }
+        .next-btn:hover { background: #fff; color: #111; }
+    </style>
 </head>
+<body>
+
+    <h1>
+        GUTS
+        <img class="hover-img" src="https://unsplash.com" alt="Purple Concert Lights Aesthetic">
+    </h1>
+    <p>Spilling her guts on the highly-anticipated sophomore rock-pop record.</p>
+
+    <div class="media-container">
+        <!-- Clickable Image Link -->
+        <a href="https://oliviarodrigo.com" target="_blank">
+            <img class="clickable-pic" src="https://unsplash.com" alt="Visit Merchandise Store">
+        </a>
+        <!-- Embedded YouTube Video (Vampire) -->
+        <iframe width="350" height="210" src="https://youtube.com" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="controls">
+        <button class="btn like-btn" onclick="toggleLike()">❤️ Like <span id="like-count">0</span></button>
+        <a href="page3.html" class="btn next-btn">Next Slide ➔</a>
+    </div>
+
+    <script>
+        let likes = 0;
+        function toggleLike() {
+            likes++;
+            document.getElementById('like-count').innerText = likes;
+        }
+    </script>
+</body>
+</html>
