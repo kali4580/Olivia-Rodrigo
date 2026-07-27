@@ -1,1 +1,108 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Page Specific Colors */
+.sour-page {
+    background-color: #D1C4E9; /* Light Purple */
+    color: #311B92;
+}
+
+.guts-page {
+    background-color: #4A148C; /* Dark Purple */
+    color: #E1BEE7;
+}
+
+.sad-girl-page {
+    background-color: #F8BBD0; /* Pink */
+    color: #880E4F;
+}
+
+/* Navigation Menu */
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover, .navbar a.active {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Main Layout Content */
+.content-container {
+    max-width: 800px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.album-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Dynamic Image Hover Effect Setup */
+.hover-trigger {
+    position: relative;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hover-image {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+/* Show Image On Hover */
+.hover-trigger:hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}

@@ -4,61 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Olivia Rodrigo - SOUR</title>
-    <style>
-        /* General Layout */
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Arial', sans-serif; }
-        body { background: linear-gradient(135deg, #dfd7fc, #b19ffb); color: #111; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; overflow: hidden; }
-
-        /* Typography & Hover Image Effect */
-        h1 { font-size: 3.5rem; margin-bottom: 20px; cursor: pointer; position: relative; display: inline-block; letter-spacing: -1px; text-shadow: 2px 2px 0px rgba(255,255,255,0.5); text-transform: uppercase; }
-        .hover-img { position: absolute; top: 120%; left: 50%; transform: translateX(-50%) scale(0); width: 260px; height: 260px; border-radius: 4px; box-shadow: 5px 5px 0px #111; object-fit: cover; transition: transform 0.3s ease; pointer-events: none; z-index: 10; border: 3px solid #111; }
-        h1:hover .hover-img { transform: translateX(-50%) scale(1); }
-
-        /* Media Elements */
-        .media-container { display: flex; gap: 30px; align-items: center; margin: 40px 0; max-width: 900px; }
-        .clickable-pic { width: 320px; height: 210px; border-radius: 4px; object-fit: cover; cursor: pointer; transition: transform 0.2s; border: 3px solid #111; box-shadow: 4px 4px 0px #111; }
-        .clickable-pic:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0px #111; }
-        iframe { border-radius: 4px; border: 3px solid #111; box-shadow: 4px 4px 0px #111; }
-
-        /* Controls (Like/Next Button) */
-        .controls { display: flex; gap: 15px; align-items: center; margin-top: 20px; }
-        .btn { padding: 12px 24px; font-size: 1rem; border: 3px solid #111; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; box-shadow: 3px 3px 0px #111; text-decoration: none; display: inline-block; }
-        .btn:active { transform: translate(3px, 3px); box-shadow: 0px 0px 0px #111; }
-        .like-btn { background: #fff; color: #111; display: flex; align-items: center; gap: 8px; }
-        .like-btn:hover { background: #ff7675; }
-        .next-btn { background: #111; color: white; }
-        .next-btn:hover { background: #fff; color: #111; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="sour-page">
+    <nav class="navbar">
+        <a href="index.html" class="active">SOUR</a>
+        <a href="page2.html">GUTS</a>
+        <a href="page3.html">OR3 Teaser</a>
+    </nav>
 
-    <h1>
-        SOUR
-        <img class="hover-img" src="https://unsplash.com" alt="SOUR Sticker Aesthetic">
-    </h1>
-    <p>Olivia's record-breaking debut album released in May 2021.</p>
-    
-    <div class="media-container">
-        <!-- Clickable Image Link -->
-        <a href="https://oliviarodrigo.com" target="_blank">
-            <img class="clickable-pic" src="https://unsplash.com" alt="Visit Official Site">
-        </a>
-        <!-- Embedded YouTube Video (Drivers License) -->
-        <iframe width="350" height="210" src="https://www.youtube.com/watch?v=gNi_6U5Pm_o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <div class="controls">
-        <button class="btn like-btn" onclick="toggleLike()">❤️ Like <span id="like-count">0</span></button>
-        <a href="page2.html" class="btn next-btn">Next Slide ➔</a>
-    </div>
-
-    <script>
-        let likes = 0;
-        function toggleLike() {
-            likes++;
-            document.getElementById('like-count').innerText = likes;
-        }
-    </script>
+    <main class="content-container">
+        <h1>SOUR (2021)</h1>
+        <p class="album-description">
+            Released in May 2021, <em>SOUR</em> is Olivia Rodrigo's monumental debut studio album. The record serves as a vulnerable, genre-blending exploration of teenage heartbreak, jealousy, and insecurity. Seamlessly shifting between explosive alt-pop punk anthems and minimalist piano ballads, it captures the raw turbulence of adolescence.
+        </p>
+        <p class="album-description">
+            The album achieved massive critical and commercial success, fueled by record-breaking global hit singles like 
+            <span class="hover-trigger">"drivers license"<span class="hover-image" style="background-image: url('drivers_license.jpg');"></span></span>, 
+            <span class="hover-trigger">"deja vu"<span class="hover-image" style="background-image: url('deja_vu.jpg');"></span></span>, and 
+            <span class="hover-trigger">"good 4 u"<span class="hover-image" style="background-image: url('good_4_u.jpg');"></span></span>. 
+            <em>SOUR</em> went on to win three Grammy Awards, solidifying Rodrigo as a defining pop voice of her generation.
+        </p>
+    </main>
 </body>
 </html>
 
