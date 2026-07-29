@@ -1,24 +1,32 @@
-
 body {
   font-family: "Courier New", monospace;
-  text-align: center;
   margin: 0;
-  padding: 20px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything horizontally */
 }
 
-/* Very simple navigation links */
+/* Cute Blocky Navigation Bar */
 nav {
-  background-color: white;
-  padding: 10px;
-  border: 2px solid black;
-  margin-bottom: 30px;
+  background-color: #fff;
+  border: 3px solid #000;
+  padding: 12px 24px;
+  margin-bottom: 40px;
+  box-shadow: 5px 5px 0px #000; /* Solid pop-art shadow */
 }
 
 nav a {
-  color: black;
+  color: #000;
   font-weight: bold;
   text-decoration: none;
   margin: 0 15px;
+}
+
+/* Makes links slightly tilt up when you hover over them */
+nav a:hover {
+  color: #ff2a6d;
+  text-decoration: underline;
 }
 
 
@@ -28,12 +36,22 @@ body.sour-page {
   color: #331b53;
 }
 
+/* Flexbox container to put stickers side-by-side */
+.sticker-row {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
 .sticker {
-  background-color: white;
-  border: 2px dashed black;
-  padding: 15px;
-  width: 200px;
-  margin: 20px auto; /* Centers the box */
+  background-color: #fff;
+  border: 3px dashed #331b53;
+  border-radius: 12px;
+  padding: 20px;
+  width: 160px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
 }
 
 
@@ -43,34 +61,52 @@ body.guts-page {
   color: #dfb2ff;
 }
 
-/* Changes the navbar colors just for the GUTS page */
+/* Swaps navbar style specifically on the GUTS page */
 .guts-page nav {
-  background-color: #ff0055;
+  background-color: #e6005c;
+  border-color: #fff;
+  box-shadow: 5px 5px 0px #dfb2ff;
 }
 
 .guts-page nav a {
-  color: white;
+  color: #fff;
 }
 
-.guts-box {
+.guts-card {
   background-color: #2a1b3d;
-  border: 3px solid #ff0055;
-  padding: 20px;
-  width: 250px;
-  margin: 20px auto;
+  border: 3px solid #e6005c;
+  padding: 25px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 8px 8px 0px #000;
+  transition: transform 0.2s; /* Makes the movement smooth */
+}
+
+/* Lifts the card up slightly when your mouse glides over it */
+.guts-card:hover {
+  transform: translateY(-5px);
 }
 
 
 /* --- DEJA VU PAGE ONLY --- */
 body.dejavu-page {
-  background-color: #f7f2f8; /* Off-white */
+  background-color: #f7f2f8; 
   color: #4a3e4d;
 }
 
-.polaroid-box {
-  background-color: white;
-  border: 1px solid gray;
-  padding: 20px;
-  width: 300px;
-  margin: 40px auto;
+.polaroid {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px 20px 40px 20px; /* Thicker bottom padding for photo look */
+  width: 320px;
+  text-align: center;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.08); /* Soft drop shadow */
+  margin-top: 30px;
+}
+
+.quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #111;
 }
