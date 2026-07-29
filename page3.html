@@ -2,72 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Rodrigo // SAD GIRL</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="sad-girl-theme">
-    <div class="custom-cursor"></div>
-    <div class="background-glow"></div>
-    <div class="floating-particles">🌸 🕊️ 🧸 💌 🎀</div>
+    <title>Sad For A Girl - Olivia Rodrigo Project</title>
+    <style>
+        /* High-contrast, emotional alternative rock aesthetic */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9; 
+            color: #111111;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
 
-    <nav class="navbar animate-fade-in">
-        <div class="nav-logo">OR // Discography</div>
-        <div class="nav-links">
-            <a href="index.html">SOUR</a>
-            <a href="page2.html">GUTS</a>
-            <a href="page3.html" class="active">GIRL SO IN LOVE</a>
-        </div>
+        nav {
+            margin-bottom: 40px;
+            background: #111111;
+            padding: 15px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-style: italic;
+            border-bottom: 2px solid #111111;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        .album-card {
+            background: #ffffff;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 0px; /* Sharp, edgy corners for this theme */
+            box-shadow: 8px 8px 0px #111111;
+            position: relative;
+            cursor: pointer;
+            border: 3px solid #111111;
+        }
+
+        .hover-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            margin-top: 20px;
+            opacity: 0;
+            filter: grayscale(100%); /* Cool dramatic black-and-white filter */
+            transition: all 0.5s ease;
+        }
+
+        .album-card:hover .hover-image {
+            opacity: 1;
+            filter: grayscale(0%); /* Becomes full color when hovered! */
+        }
+
+        .media-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 0px;
+            border: 3px solid #111111;
+            box-shadow: 4px 4px 0px #111111;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 2px solid #111111;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .user-photo {
+            width: 100%;
+            max-width: 400px;
+            border: 3px solid #111111;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">1. SOUR</a>
+        <a href="page2.html">2. GUTS</a>
+        <a href="page3.html" style="text-decoration: underline;">3. The Tour</a>
     </nav>
 
-    <main class="showcase-container">
-        <header class="hero-section animate-fade-in">
-            <h1 class="glitch-title" data-text="sad girl">sad girl</h1>
-            <p class="subtitle">you seem pretty sad for a girl so in love // 2026</p>
-        </header>
+    <br><br>
+    <h1>"You seem pretty sad for a girl so in love"</h1>
 
-        <section class="media-showcase animate-slide-up">
-            <div class="album-art-wrapper">
-                <img src="or3_cover.jpg" alt="OR3 Album Cover" class="album-art">
-                <div class="vinyl-record" style="background-image: url('or3_cover.jpg');"></div>
-            </div>
-            
-            <div class="video-wrapper">
-                <iframe src="https://youtube.com" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </section>
+    <div class="album-card">
+        <h2>🖤 Hover to Reveal the Mood 🖤</h2>
+        <p>Exploring the deeper lyrical concepts of heartbreak.</p>
+        <!-- REPLACE placeholder below with your own picture file name -->
+        <img class="hover-image" src="https://picsum.photos" alt="Theme Graphic">
+    </div>
 
-        <section class="content-grid animate-slide-up">
-            <div class="bio-card">
-                <h2>The Thematic Depth of OR3</h2>
-                <p>Arriving on June 12, 2026, <em>you seem pretty sad for a girl so in love</em> defines a revolutionary sonic shift into experimental dream-pop and melancholic new wave synth textures. Moving completely past the raw pop-punk phase of her youth, the record explores the structural friction between our outward appearances and our true inner emotional baggage across two beautifully balanced conceptual halves.</p>
-                <p>The tracking lineup showcases her most critically acclaimed lyricism yet, driven by the atmospheric global hit single 
-                    <span class="hover-trigger">"drop dead"<span class="hover-image" style="background-image: url('drop_dead.jpg');"></span></span>, the heavily raw instrumentation of 
-                    <span class="hover-trigger">"the cure"<span class="hover-image" style="background-image: url('the_cure.jpg');"></span></span>, and a legendary dreamlike collaboration featuring Robert Smith on the track 
-                    <span class="hover-trigger">"what's wrong with me"<span class="hover-image" style="background-image: url('whats_wrong.jpg');"></span></span>. Wrapped in soft rose-gold bows, it presents an outstanding masterpiece of modern poetic romance.
-                </p>
-            </div>
+    <div class="media-section">
+        <h3>Live Performances</h3>
+        
+        <div class="video-container">
+            <!-- REPLACE "ZLlurXEMbBc" with another YouTube video link ID -->
+            <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-            <div class="tracklist-card">
-                <h2>Essential Tracklist</h2>
-                <ol class="track-grid">
-                    <li><span class="track-num">01</span> drop dead</li>
-                    <li><span class="track-num">02</span> purple</li>
-                    <li><span class="track-num">03</span> the cure</li>
-                    <li><span class="track-num">04</span> expectations</li>
-                    <li><span class="track-num">05</span> what's wrong with me</li>
-                    <li><span class="track-num">06</span> my way</li>
-                </ol>
-            </div>
-        </section>
-    </main>
+        <h3>My Concert / Aesthetic Media</h3>
+        <!-- REPLACE "your-photo3.jpg" with your actual photo filename -->
+        <img class="user-photo" src="https://picsum.photos" alt="My Concept Photo">
+    </div>
 
-    <script>
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', e => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-    </script>
 </body>
 </html>

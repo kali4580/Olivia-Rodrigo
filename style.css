@@ -1,237 +1,150 @@
-:root {
-    --bg-dark: #09080d;
-    --card-bg: #12101a;
-    --text-main: #f3f1f6;
-    --text-muted: #9e9aaa;
-    
-    /* Era Theme Color References */
-    --color-sour: #c5a3ff;      /* Pastel Lavender */
-    --color-guts: #f83a77;      /* Vivid Bold Magenta */
-    --color-or3: #00f2fe;       /* Electric Neo Blue */
-    
-    --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Plus Jakarta Sans', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    background-color: var(--bg-dark);
-    color: var(--text-main);
-    font-family: var(--font-body);
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ==========================================================================
-   2. STICKY GLOBAL NAVIGATION BAR
-   ========================================================================== */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background: rgba(18, 16, 26, 0.85);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-logo {
-    font-family: var(--font-heading);
-    color: var(--text-main);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-}
-
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: color 0.3s ease, border-color 0.3s ease;
-    padding-bottom: 4px;
-}
-
-.nav-links a:hover, .nav-links a.active {
-    color: var(--text-main);
-}
-
-/* Underline Colors matching the active state */
-.sour-theme .nav-links a.active { border-bottom: 2px solid var(--color-sour); }
-.guts-theme .nav-links a.active { border-bottom: 2px solid var(--color-guts); }
-.or3-theme .nav-links a.active { border-bottom: 2px solid var(--color-or3); }
-
-/* ==========================================================================
-   3. ADAPTIVE AMBIENT BACKGROUND GRADIENTS
-   ========================================================================== */
-.sour-theme {
-    background: radial-gradient(circle at top right, rgba(197, 163, 255, 0.12), transparent 45%), var(--bg-dark);
-}
-.guts-theme {
-    background: radial-gradient(circle at top right, rgba(248, 58, 119, 0.12), transparent 45%), var(--bg-dark);
-}
-.or3-theme {
-    background: radial-gradient(circle at top right, rgba(0, 242, 254, 0.10), transparent 45%), var(--bg-dark);
-}
-
-/* ==========================================================================
-   4. LAYOUTS & HERO CORES
-   ========================================================================== */
-.inner-hero {
-    padding: 80px 20px 40px 20px;
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.inner-hero h1 {
-    font-family: var(--font-heading);
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin: 10px 0 20px 0;
-    letter-spacing: -1px;
-}
-
-.inner-hero h1.long-title {
-    font-size: 2.8rem;
-    line-height: 1.2;
-}
-
-.era-tag {
-    text-transform: uppercase;
-    font-family: var(--font-heading);
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 0.85rem;
-}
-
-.album-intro {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-/* Color distribution tags tied to themes */
-.sour-theme .era-tag, .sour-theme h1 { color: var(--color-sour); }
-.guts-theme .era-tag, .guts-theme h1 { color: var(--color-guts); }
-.or3-theme .era-tag, .or3-theme h1 { color: var(--color-or3); }
-
-/* Advanced CSS Split Grid */
-.content-wrapper {
-    max-width: 1100px;
-    margin: 20px auto 60px auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 30px;
-    flex: 1;
-}
-
-/* Responsive breakpoint for smaller tablets and mobile screens */
-@media (max-width: 768px) {
-    .content-wrapper { grid-template-columns: 1fr; }
-    .inner-hero h1 { font-size: 3rem; }
-    .inner-hero h1.long-title { font-size: 2rem; }
-}
-
-/* ==========================================================================
-   5. DECORATED CONTAINERS & CARD HOVERS
-   ========================================================================== */
-.details-card {
-    background: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    border-radius: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
     padding: 40px;
-    transition: box-shadow 0.4s ease;
+    text-align: center;
+    transition: background-color 0.5s ease;
 }
 
-/* Subtle accent glows for cards when hovering over details */
-.sour-theme .details-card:hover { box-shadow: 0 10px 30px rgba(197, 163, 255, 0.04); }
-.guts-theme .details-card:hover { box-shadow: 0 10px 30px rgba(248, 58, 119, 0.04); }
-.or3-theme .details-card:hover { box-shadow: 0 10px 30px rgba(0, 242, 254, 0.04); }
-
-.details-card h2 {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    margin-bottom: 25px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    padding-bottom: 10px;
-}
-
-/* Customized Tracklist Counters */
-.track-list {
-    list-style: none;
-}
-
-.track-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-}
-
-.track-list li::before {
-    margin-right: 12px;
-    font-size: 0.85rem;
-    opacity: 0.6;
-}
-
-.sour-theme .track-list li::before { content: "💜"; }
-.guts-theme .track-list li::before { content: "❤️"; }
-.or3-theme .track-list li::before { content: "🦋"; }
-
-/* Right Sidebar Metrics */
-.achievements {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.stat-box {
-    background: rgba(255, 255, 255, 0.01);
-    border: 1px solid rgba(255, 255, 255, 0.02);
-    padding: 25px;
+/* ==========================================
+   THE NAVIGATION BAR (Top of Page)
+   ========================================== */
+nav {
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
     border-radius: 12px;
-    text-align: center;
+    display: inline-block;
+    backdrop-filter: blur(5px); /* Trendy glassmorphism blur effect */
 }
 
-.stat-box strong {
-    font-family: var(--font-heading);
-    font-size: 2.2rem;
-    display: block;
-    margin-bottom: 2px;
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
 }
 
-.sour-theme .stat-box strong { color: var(--color-sour); }
-.guts-theme .stat-box strong { color: var(--color-guts); }
-.or3-theme .stat-box strong { color: var(--color-or3); }
-
-.stat-box p {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-/* Footer resets */
-footer {
-    text-align: center;
+/* ==========================================
+   THE A+ HOVER-TO-REVEAL ALBUM CARD
+   ========================================== */
+.album-card {
+    max-width: 500px;
+    margin: 40px auto;
     padding: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.03);
-    background: #0b0a10;
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 0.85rem;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Make the whole card pop up slightly when hovered */
+.album-card:hover {
+    transform: translateY(-5px);
+}
+
+/* The actual image inside the card (hidden by default) */
+.hover-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin-top: 20px;
+    
+    /* Magical Reveal Settings */
+    opacity: 0;               /* Makes it invisible */
+    transform: scale(0.9);    /* Makes it slightly smaller */
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth bounce transition */
+}
+
+/* Trigger the reveal when the mouse touches the parent album card */
+.album-card:hover .hover-image {
+    opacity: 1;               /* Becomes fully visible */
+    transform: scale(1);      /* Grows to full size */
+}
+
+/* ==========================================
+   YOUTUBE & MEDIA CONTAINERS
+   ========================================== */
+.media-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Keeps YouTube videos perfectly proportioned on phones or laptops */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Golden 16:9 widescreen ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.user-photo {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.user-photo:hover {
+    transform: scale(1.03); /* Tiny zoom effect when hovering your own pictures */
+}
+
+/* ==========================================
+   PAGE-SPECIFIC COLOR ERAS (Theme Engines)
+   ========================================== */
+
+/* 1. SOUR Theme (index.html) */
+.sour-body {
+    background-color: #d1c4e9; 
+    color: #2c003e;
+}
+.sour-body nav a { color: #2c003e; }
+.sour-body nav a:hover { color: #ffffff; text-shadow: 1px 1px 5px rgba(0,0,0,0.2); }
+.sour-body h1 { font-size: 3.5rem; letter-spacing: 4px; text-shadow: 3px 3px 0px #fff; }
+.sour-body .album-card { background: white; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 3px solid #2c003e; }
+.sour-body .media-section { background: rgba(255, 255, 255, 0.6); border-radius: 15px; }
+.sour-body .user-photo { border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.15); border-radius: 4px; }
+.sour-body .video-container { box-shadow: 0 5px 15px rgba(0,0,0,0.2); border-radius: 10px; }
+
+/* 2. GUTS Theme (page2.html) */
+.guts-body {
+    background-color: #1a0033; 
+    color: #f3e5f5;
+}
+.guts-body nav a { color: #f3e5f5; }
+.guts-body nav a:hover { color: #e040fb; }
+.guts-body h1 { font-size: 3.5rem; letter-spacing: 6px; text-transform: uppercase; text-shadow: 2px 2px 8px #e040fb; }
+.guts-body .album-card { background: #2d004d; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border: 2px solid #e040fb; }
+.guts-body .media-section { background: rgba(255, 255, 255, 0.05); border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+.guts-body .user-photo { border: 5px solid #2d004d; box-shadow: 0 5px 15px rgba(0,0,0,0.5); border-radius: 4px; }
+.guts-body .video-container { border-radius: 10px; box-shadow: 0 5px 25px rgba(224, 64, 251, 0.2); }
+/* Subtle tilt on the GUTS picture reveal */
+.guts-body .album-card:hover .hover-image { transform: scale(1) rotate(-2deg); }
+
+/* 3. SAD GIRL Theme (page3.html) */
+.sad-body {
+    background-color: #f4f4f9; 
+    color: #111111;
+}
+.sad-body nav { background: #111111; }
+.sad-body nav a { color: #ffffff; }
+.sad-body nav a:hover { opacity: 0.6; }
+.sad-body h1 { font-size: 2.2rem; font-style: italic; border-bottom: 2px solid #111111; display: inline-block; padding-bottom: 10px; }
+.sad-body .album-card { background: #ffffff; border-radius: 0px; box-shadow: 8px 8px 0px #111111; border: 3px solid #111111; }
+.sad-body .media-section { background: #ffffff; border-radius: 0px; border: 3px solid #111111; box-shadow: 4px 4px 0px #111111; }
+.sad-body .user-photo { border: 3px solid #111111; }
+.sad-body .video-container { border: 3px solid #111111; }
+/* Special dramatic black-and-white filter trick that shifts to color on hover */
+.sad-body .hover-image { filter: grayscale(100%); transition: all 0.6s ease; }
+.sad-body .album-card:hover .hover-image { filter: grayscale(0%); }

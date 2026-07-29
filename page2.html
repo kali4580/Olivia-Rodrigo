@@ -2,60 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivia Rodrigo | GUTS</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="guts-theme">
+    <title>GUTS - Olivia Rodrigo Project</title>
+    <style>
+        /* Moody, dark vampire-purple theme for GUTS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a0033; 
+            color: #f3e5f5;
+            margin: 0;
+            padding: 40px;
+            text-align: center;
+        }
 
-    <nav class="navbar">
-        <a href="index.html" class="nav-logo">OR Trilogy</a>
-        <div class="nav-links">
-            <a href="index.html">SOUR</a>
-            <a href="guts.html" class="active">GUTS</a>
-            <a href="or3.html">OR3</a>
-        </div>
+        nav {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 12px;
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f3e5f5;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e040fb;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px #e040fb;
+            margin-bottom: 10px;
+        }
+
+        .album-card {
+            background: #2d004d;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            position: relative;
+            cursor: pointer;
+            border: 2px solid #e040fb;
+        }
+
+        .hover-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+            opacity: 0;
+            transform: scale(0.9) rotate(-3deg); /* Fun slight tilt on reveal */
+            transition: all 0.4s ease-in-out;
+        }
+
+        .album-card:hover .hover-image {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+
+        .media-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 10px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .user-photo {
+            width: 100%;
+            max-width: 400px;
+            border: 5px solid #2d004d;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">1. SOUR</a>
+        <a href="page2.html" style="text-decoration: underline;">2. GUTS</a>
+        <a href="page3.html">3. The Tour</a>
     </nav>
 
-    <header class="inner-hero">
-        <span class="era-tag">Album Two • 2023</span>
-        <h1>GUTS</h1>
-        <p class="album-intro">A sophisticated, energetic sophomore release capturing the messy chaos of early adulthood and societal expectations.</p>
-    </header>
+    <h1>GUTS ERA</h1>
+    <p>Released September 8, 2023</p>
 
-    <main class="content-wrapper">
-        <section class="details-card">
-            <h2>Official Tracklist</h2>
-            <ul class="track-list">
-                <li>all-american bitch</li>
-                <li>bad idea right?</li>
-                <li>vampire</li>
-                <li>lacy</li>
-                <li>ballad of a homeschooled girl</li>
-                <li>making the bed</li>
-                <li>logical</li>
-                <li>get him back!</li>
-                <li>love is embarrassing</li>
-                <li>the grudge</li>
-                <li>pretty isn't pretty</li>
-                <li>teenage dream</li>
-            </ul>
-        </section>
+    <div class="album-card">
+        <h2>⚡ Hover to Spill Your GUTS ⚡</h2>
+        <p>A bolder, more rock-infused evolution.</p>
+        <!-- REPLACE placeholder below with your own picture file name -->
+        <img class="hover-image" src="https://picsum.photos" alt="Guts Album Cover">
+    </div>
 
-        <section class="details-card achievements">
-            <h2>Era Milestones</h2>
-            <div class="stat-box"><strong>6x</strong> <p>Grammy Nominations</p></div>
-            <div class="stat-box"><strong>102</strong> <p>Sold Out Tour Shows</p></div>
-            <div class="stat-box"><strong>Global</strong> <p>Critical Acclaim</p></div>
-        </section>
-    </main>
+    <div class="media-section">
+        <h3>Music & Fan Gallery</h3>
+        
+        <div class="video-container">
+            <!-- REPLACE "H8SRD6-mdfw" with another YouTube video link ID -->
+            <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
 
-    <footer>
-        <p>Olivia Rodrigo Web Portfolio Assignment © 2026.</p>
-    </footer>
+        <h3>My GUTS Aesthetic Photo</h3>
+        <!-- REPLACE "your-photo2.jpg" with your actual photo filename -->
+        <img class="user-photo" src="https://picsum.photos" alt="My Guts Photo">
+    </div>
 
 </body>
 </html>
