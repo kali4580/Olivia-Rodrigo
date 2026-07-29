@@ -1,0 +1,76 @@
+
+body {
+  font-family: "Courier New", monospace;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Very simple navigation links */
+nav {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid black;
+  margin-bottom: 30px;
+}
+
+nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+
+/* --- SOUR PAGE ONLY --- */
+body.sour-page {
+  background-color: #d1bbf3; /* Pastel Lavender */
+  color: #331b53;
+}
+
+.sticker {
+  background-color: white;
+  border: 2px dashed black;
+  padding: 15px;
+  width: 200px;
+  margin: 20px auto; /* Centers the box */
+}
+
+
+/* --- GUTS PAGE ONLY --- */
+body.guts-page {
+  background-color: #1e112a; /* Dark Purple */
+  color: #dfb2ff;
+}
+
+/* Changes the navbar colors just for the GUTS page */
+.guts-page nav {
+  background-color: #ff0055;
+}
+
+.guts-page nav a {
+  color: white;
+}
+
+.guts-box {
+  background-color: #2a1b3d;
+  border: 3px solid #ff0055;
+  padding: 20px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+
+/* --- DEJA VU PAGE ONLY --- */
+body.dejavu-page {
+  background-color: #f7f2f8; /* Off-white */
+  color: #4a3e4d;
+}
+
+.polaroid-box {
+  background-color: white;
+  border: 1px solid gray;
+  padding: 20px;
+  width: 300px;
+  margin: 40px auto;
+}
