@@ -2,141 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GUTS - Olivia Rodrigo Project</title>
+    <title>GUTS Page</title>
     <style>
-        /* Moody, dark vampire-purple theme for GUTS */
+        /* Dark purple theme for GUTS */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a0033; 
-            color: #f3e5f5;
-            margin: 0;
-            padding: 40px;
+            font-family: Arial, sans-serif;
+            background-color: #2b1a3d;
+            color: #ffffff;
             text-align: center;
-        }
-
-        nav {
-            margin-bottom: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 12px;
-            display: inline-block;
+            padding: 20px;
         }
 
         nav a {
-            text-decoration: none;
-            color: #f3e5f5;
+            margin: 0 15px;
+            color: #ffffff;
             font-weight: bold;
-            margin: 0 20px;
-            font-size: 1.1rem;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #e040fb;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 8px #e040fb;
-            margin-bottom: 10px;
-        }
-
-        .album-card {
-            background: #2d004d;
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            position: relative;
-            cursor: pointer;
-            border: 2px solid #e040fb;
-        }
-
-        .hover-image {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            border-radius: 10px;
-            margin-top: 20px;
-            opacity: 0;
-            transform: scale(0.9) rotate(-3deg); /* Fun slight tilt on reveal */
-            transition: all 0.4s ease-in-out;
-        }
-
-        .album-card:hover .hover-image {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
-        }
-
-        .media-section {
-            max-width: 800px;
-            margin: 40px auto;
-            background: rgba(255, 255, 255, 0.05);
+        .hover-box {
+            border: 2px solid #ffffff;
+            background-color: #3d2654;
+            width: 300px;
+            margin: 30px auto;
             padding: 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 30px;
-            border-radius: 10px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hover-box img {
+            display: none;
             width: 100%;
-            height: 100%;
-        }
-
-        .user-photo {
-            width: 100%;
-            max-width: 400px;
-            border: 5px solid #2d004d;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-            border-radius: 4px;
             margin-top: 15px;
+        }
+
+        .hover-box:hover img {
+            display: block;
+        }
+
+        .my-media {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">1. SOUR</a>
-        <a href="page2.html" style="text-decoration: underline;">2. GUTS</a>
-        <a href="page3.html">3. The Tour</a>
+        <a href="index.html">SOUR</a> | 
+        <a href="page2.html">GUTS</a> | 
+        <a href="page3.html">SAD GIRL</a>
     </nav>
 
     <h1>GUTS ERA</h1>
-    <p>Released September 8, 2023</p>
 
-    <div class="album-card">
-        <h2>⚡ Hover to Spill Your GUTS ⚡</h2>
-        <p>A bolder, more rock-infused evolution.</p>
-        <!-- REPLACE placeholder below with your own picture file name -->
-        <img class="hover-image" src="https://picsum.photos" alt="Guts Album Cover">
+    <div class="hover-box">
+        <h3>Move mouse here to see image</h3>
+        <img src="https://picsum.photos" alt="Guts Art">
     </div>
 
-    <div class="media-section">
-        <h3>Music & Fan Gallery</h3>
-        
-        <div class="video-container">
-            <!-- REPLACE "H8SRD6-mdfw" with another YouTube video link ID -->
-            <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <h3>My GUTS Aesthetic Photo</h3>
-        <!-- REPLACE "your-photo2.jpg" with your actual photo filename -->
-        <img class="user-photo" src="https://picsum.photos" alt="My Guts Photo">
+    <h2>My Video Selection</h2>
+    <div class="my-media">
+        <iframe width="100%" height="315" src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
     </div>
+
+    <h2>My Personal Photo</h2>
+    <img class="my-media" src="https://picsum.photos" alt="My Photo">
 
 </body>
 </html>

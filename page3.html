@@ -2,140 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sad For A Girl - Olivia Rodrigo Project</title>
+    <title>Sad For A Girl Page</title>
     <style>
-        /* High-contrast, emotional alternative rock aesthetic */
+        /* Plain grey/white moody look */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9; 
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             color: #111111;
-            margin: 0;
-            padding: 40px;
             text-align: center;
-        }
-
-        nav {
-            margin-bottom: 40px;
-            background: #111111;
-            padding: 15px;
-            border-radius: 12px;
-            display: inline-block;
+            padding: 20px;
         }
 
         nav a {
-            text-decoration: none;
-            color: #ffffff;
+            margin: 0 15px;
+            color: #111111;
             font-weight: bold;
-            margin: 0 20px;
-            font-size: 1.1rem;
-            transition: opacity 0.3s;
         }
 
-        nav a:hover {
-            opacity: 0.7;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-style: italic;
-            border-bottom: 2px solid #111111;
-            display: inline-block;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-
-        .album-card {
-            background: #ffffff;
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 30px;
-            border-radius: 0px; /* Sharp, edgy corners for this theme */
-            box-shadow: 8px 8px 0px #111111;
-            position: relative;
-            cursor: pointer;
-            border: 3px solid #111111;
-        }
-
-        .hover-image {
-            width: 100%;
-            max-width: 350px;
-            height: auto;
-            margin-top: 20px;
-            opacity: 0;
-            filter: grayscale(100%); /* Cool dramatic black-and-white filter */
-            transition: all 0.5s ease;
-        }
-
-        .album-card:hover .hover-image {
-            opacity: 1;
-            filter: grayscale(0%); /* Becomes full color when hovered! */
-        }
-
-        .media-section {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 0px;
-            border: 3px solid #111111;
-            box-shadow: 4px 4px 0px #111111;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 30px;
+        .hover-box {
             border: 2px solid #111111;
+            background-color: #ffffff;
+            width: 300px;
+            margin: 30px auto;
+            padding: 20px;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .hover-box img {
+            display: none;
             width: 100%;
-            height: 100%;
-        }
-
-        .user-photo {
-            width: 100%;
-            max-width: 400px;
-            border: 3px solid #111111;
             margin-top: 15px;
+        }
+
+        .hover-box:hover img {
+            display: block;
+        }
+
+        .my-media {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">1. SOUR</a>
-        <a href="page2.html">2. GUTS</a>
-        <a href="page3.html" style="text-decoration: underline;">3. The Tour</a>
+        <a href="index.html">SOUR</a> | 
+        <a href="page2.html">GUTS</a> | 
+        <a href="page3.html">SAD GIRL</a>
     </nav>
 
-    <br><br>
     <h1>"You seem pretty sad for a girl so in love"</h1>
 
-    <div class="album-card">
-        <h2>🖤 Hover to Reveal the Mood 🖤</h2>
-        <p>Exploring the deeper lyrical concepts of heartbreak.</p>
-        <!-- REPLACE placeholder below with your own picture file name -->
-        <img class="hover-image" src="https://picsum.photos" alt="Theme Graphic">
+    <div class="hover-box">
+        <h3>Move mouse here to see image</h3>
+        <img src="https://picsum.photos" alt="Sad Theme Art">
     </div>
 
-    <div class="media-section">
-        <h3>Live Performances</h3>
-        
-        <div class="video-container">
-            <!-- REPLACE "ZLlurXEMbBc" with another YouTube video link ID -->
-            <iframe src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <h3>My Concert / Aesthetic Media</h3>
-        <!-- REPLACE "your-photo3.jpg" with your actual photo filename -->
-        <img class="user-photo" src="https://picsum.photos" alt="My Concept Photo">
+    <h2>My Video Selection</h2>
+    <div class="my-media">
+        <iframe width="100%" height="315" src="https://youtube.com" frameborder="0" allowfullscreen></iframe>
     </div>
+
+    <h2>My Personal Photo</h2>
+    <img class="my-media" src="https://picsum.photos" alt="My Photo">
 
 </body>
 </html>
