@@ -1,59 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Olivia Rodrigo Project - Guts</title>
-    <style>
-        body {
-            background-color: purple;
-            color: white;
-            text-align: center;
-            font-family: sans-serif;
-        }
-
-        
-        a {
-            color: yellow;
-        }
-
-        .hover-box {
-            border: 2px solid white;
-            background-color: darkmagenta;
-            width: 300px;
-            margin: auto;
-            padding: 10px;
-        }
-
-        .hover-box img {
-            display: none;
-            width: 250px;
-        }
-
-        .hover-box:hover img {
-            display: block;
-        }
-    </style>
+    <title>My Olivia Rodrigo Project - Guts</title>
 </head>
-<body>
+<!-- REPLACE guts-bg.jpg with your background image filename -->
+<body background="guts-bg.jpg" text="white">
 
-    <p>
-        <a href="index.html">SOUR PAGE</a> | 
-        <a href="page2.html">GUTS PAGE</a> | 
-        <a href="page3.html">SAD GIRL PAGE</a>
-    </p>
+    <center>
+        
+        <p>
+            <a href="index.html"><font color="yellow">SOUR PAGE</font></a> | 
+            <a href="page2.html"><font color="yellow">GUTS PAGE</font></a> | 
+            <a href="page3.html"><font color="yellow">SAD GIRL PAGE</font></a>
+        </p>
 
-    <h1>GUTS ERA</h1>
-    <p>This page is all about her second album called Guts.</p>
+        <h1>GUTS ERA</h1>
+        <p>This page is about her second album called Guts.</p>
 
-    <div class="hover-box">
-        <h3>Hover your mouse here to see a picture!</h3>
-        <img src="https://picsum.photos">
-    </div>
+        <hr width="50%">
 
-    <h2>My Favorite YouTube Video</h2>
-    <iframe width="450" height="300" src="https://youtube.com"></iframe>
+        <h3>Move your mouse over the box below to see the art!</h3>
+        
+        <table border="3" bgcolor="darkmagenta" cellpadding="20">
+            <tr>
+                <td onmouseover="document.getElementById('guts-art').style.display='block';" 
+                    onmouseout="document.getElementById('guts-art').style.display='none';">
+                    
+                    <b>[ PUT MOUSE HERE ]</b>
+                    
+                    <br><br>
+                    
+                    <img id="guts-art" src="https://picsum.photos" width="250" style="display:none;">
+                </td>
+            </tr>
+        </table>
 
-    <h2>My Own Photo</h2>
-    <img src="https://picsum.photos" width="400">
+        <br><br>
+
+        <h2>My Favorite YouTube Video</h2>
+        <iframe width="450" height="300" src="https://youtube.com"></iframe>
+
+        <h2>My Personal Photo</h2>
+        <!-- REPLACE my-photo2.jpg with your own photo filename -->
+        <img src="my-photo2.jpg" width="400" border="5">
+
+    </center>
 
 </body>
 </html>
