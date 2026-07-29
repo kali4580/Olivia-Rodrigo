@@ -2,65 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SOUR Era 🦋</title>
+    <title>SOUR - Olivia Rodrigo Project</title>
     <style>
+        /* Signature SOUR light purple theme from our first version */
         body {
-            background-color: #dfd5f0; 
-            color: #3d1d6d;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d1c4e9; 
+            color: #2c003e;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        marquee {
-            background-color: #ba9fe3;
-            color: white;
-            padding: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            width: 100%;
-        }
-        .scrapbook {
-            max-width: 500px;
-            background: white;
-            padding: 30px;
-            margin: 40px auto;
-            border-radius: 10px;
-            box-shadow: 8px 8px 0px #ba9fe3;
-            border: 2px solid #3d1d6d;
+            padding: 40px;
             text-align: center;
         }
-        h1 { font-size: 2.5rem; text-transform: lowercase; }
-        .sticker {
+
+        /* Top Navigation Bar Layout */
+        nav {
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 15px;
+            border-radius: 12px;
             display: inline-block;
-            background: #fffbcf;
-            padding: 5px 10px;
-            border: 1px dashed #eedb3d;
-            transform: rotate(-5deg);
-            font-weight: bold;
-            margin: 10px;
         }
-        ul { list-style-type: '🦋 '; text-align: left; display: inline-block; }
-        li { margin: 10px 0; font-size: 1.1rem; }
+
+        nav a {
+            text-decoration: none;
+            color: #2c003e;
+            font-weight: bold;
+            margin: 0 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Stylized Header */
+        h1 {
+            font-size: 3.5rem;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0px #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Interactive Album Hover Box card styling */
+        .album-card {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            border: 3px solid #2c003e;
+        }
+
+        /* Hidden image state for the hover interaction */
+        .hover-image {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: none; /* Keeps it completely hidden until mouse hover */
+        }
+
+        /* Reveal image state when user hovers over the card */
+        .album-card:hover .hover-image {
+            display: block;
+        }
+
+        /* Styling for your personal uploaded image on the right */
+        .user-photo {
+            width: 100%;
+            max-width: 320px;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-    <marquee>🦋 God, it's brutal out here... 🦋 Do you get déjà vu? 🦋</marquee>
-    <div class="scrapbook">
-        <h1>sour era ★</h1>
-        <div class="sticker">DEJA VU</div>
-        <div class="sticker" style="transform: rotate(5deg); background: #ffdfdf; border-color: #ff9e9e;">BRUTAL</div>
-        <p>where the butterfly stickers and heartbreak started.</p>
-        <h3>tracklist favorites:</h3>
-        <ul>
-            <li>drivers license</li>
-            <li>good 4 u</li>
-            <li>traitor</li>
-            <li>jealousy, jealousy</li>
-        </ul>
-    </div>
+
+    <!-- Simple Navigation Menu -->
+    <nav>
+        <a href="index.html" style="text-decoration: underline;">1. SOUR</a>
+        <a href="page2.html">2. GUTS</a>
+        <a href="page3.html">3. The Tour</a>
+    </nav>
+
+    <h1>SOUR ERA</h1>
+    <p>Released May 21, 2021</p>
+
+    <center>
+        <!-- Layout Table: Creates the Left and Right Columns without complex CSS grid -->
+        <table border="0" cellpadding="20" width="850">
+            <tr>
+                <!-- LEFT COLUMN: Hover Image Card -->
+                <td align="center" valign="top" width="50%">
+                    <div class="album-card">
+                        <h2>✨ Hover Here ✨</h2>
+                        <p>Move mouse to reveal album art.</p>
+                        <!-- Change link below to your own album artwork file if you prefer -->
+                        <img class="hover-image" src="https://picsum.photos" alt="Sour Album Cover">
+                    </div>
+                </td>
+
+                <!-- RIGHT COLUMN: Your Personal Photo -->
+                <td align="center" valign="top" width="50%">
+                    <h3>My Fan Gallery Picture</h3>
+                    <!-- REPLACE "your-photo1.jpg" with your actual photo filename -->
+                    <img class="user-photo" src="https://picsum.photos" alt="My Photo Context">
+                </td>
+            </tr>
+
+            <!-- BOTTOM ROW: Spans across both columns to host the video -->
+            <tr>
+                <td colspan="2" align="center">
+                    <br><hr style="border: 1px dashed #2c003e; width: 80%;"><br>
+                    <h3>Featured Music Video</h3>
+                    <!-- REPLACE the URL code "BcDKy6IDaCw" with any YouTube video ID -->
+                    <iframe width="560" height="315" src="https://youtube.com" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.15);"></iframe>
+                </td>
+            </tr>
+        </table>
+    </center>
+
 </body>
 </html>
