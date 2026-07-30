@@ -31,8 +31,8 @@
 }
 
 .back-right {
-  right: 5px
-  top: 100px
+  right: 5px;
+  top: 100px;
   transform: rotate(-8deg);
   z-index: -1;
 }
