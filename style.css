@@ -1,13 +1,14 @@
-.left-photo {
-  position: fixed;
-  left: 20px;
-  top: 120px;
-  width: 180px;
-}
-
+.left-photo,
 .right-photo {
   position: fixed;
-  right: 20px;
   top: 120px;
-  width: 180px;
+  width: 200px;
+  height: 500px;
+  object-fit: cover;
+}
+.left-photo {
+  left: 20px;
+}
+.right-photo {
+  right: 20px;
 }
