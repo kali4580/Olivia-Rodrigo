@@ -20,5 +20,5 @@
 
 .right-photo {
   left: 25px;
-  transform: rotate(-5deg);
+  transform: rotate(5deg);
 }
