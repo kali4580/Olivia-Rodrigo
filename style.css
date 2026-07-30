@@ -2,8 +2,8 @@
 .right-photo {
   position: fixed;
   top: 120px;
-  width: 200px;
-  height: 500px;
+  width: 220px;
+  height: 600px;
   object-fit: cover;
 }
 
