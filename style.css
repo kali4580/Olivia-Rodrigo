@@ -1,2 +1,13 @@
+.left-photo {
+  position: fixed;
+  left: 20px;
+  top: 120px;
+  width: 180px;
+}
 
-  
+.right-photo {
+  position: fixed;
+  right: 20px;
+  top: 120px;
+  width: 180px;
+}
